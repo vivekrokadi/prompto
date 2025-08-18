@@ -17,9 +17,9 @@ function Main() {
   } = useContext(Context);
 
   return (
-    <main className="bg-[#121826] h-[100vh] w-full flex flex-col justify-between text-gray-300 gap-6">
+    <main className="bg-[#121826] flex-1 min-h-screen w-full flex flex-col justify-between text-gray-300 gap-6">
       <div className="flex justify-between items-center w-[95%] mx-auto mt-5">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center">
           <img className="w-[50px]" src="/prompto_rm.png" alt="Prompto Logo" />
           <h1 className="text-lg font-semibold">Prompto</h1>
         </div>
@@ -106,8 +106,8 @@ function Main() {
         </div>
       )}
 
-      <div className="py-3.5 sm:py-5 w-full max-w-[900px] mx-auto">
-        <div className="flex items-center justify-between bg-[#1A2032] rounded-full p-3 shadow focus-within:ring-2 focus-within:ring-[#00AEEF]">
+      <div className="py-2 sm:py-6 sm:w-full w-[90%] sm:max-w-[900px] mx-auto">
+        <div className="flex items-center justify-between bg-[#1A2032] rounded-full p-1 sm:p-2 shadow focus-within:ring-2 focus-within:ring-[#00AEEF]">
           <input
             type="text"
             className="outline-none border-none bg-transparent p-2 flex-1 text-[16px] text-gray-200 placeholder-gray-500"
@@ -115,7 +115,7 @@ function Main() {
             onChange={(e) => setInput(e.target.value)}
             value={input}
           />
-          <div className="flex items-center  px-4">
+          <div className="flex items-center  px-5">
             {/* <img
               src={assets.gallery_icon}
               alt="Gallery"
