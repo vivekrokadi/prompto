@@ -12,7 +12,7 @@ import youtube_icon from './youtube_icon.png'
 import message_icon from './message_icon.png'
 import code_icon from './code_icon.png'
 import send_icon from './send_icon.png'
-import prompto from './prompto.png'
+import prompto from './Prompto.png'
 import prompto_chat from './prompto_chat.png'
 
 
