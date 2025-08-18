@@ -8,7 +8,7 @@ const Sidebar = () => {
     useContext(Context);
 
   return (
-    <div className={`sidebar min-h-screen hidden sm:flex flex-col justify-between bg-[#0A0F1C] text-gray-300 px-4 py-6 border-r border-[#1F2937] transition-all duration-300
+    <div className={`sidebar h-[100vh] hidden sm:flex flex-col justify-between bg-[#0A0F1C] text-gray-300 px-4 py-6 border-r border-[#1F2937] transition-all duration-300
     ${extended ? "w-60" : "w-16"}`}>
       <div className="top">
         <img
