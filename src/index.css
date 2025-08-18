@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+
+
+#root{
+  min-height: 100vh;
+  display: flex;
+}
+
+.result::-webkit-scrollbar{
+  display: none;
+}
