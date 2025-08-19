@@ -115,7 +115,7 @@ function Main() {
             onChange={(e) => setInput(e.target.value)}
             value={input}
           />
-          <div className="flex items-center  px-5">
+          <div className="flex items-center  px-4">
             {/* <img
               src={assets.gallery_icon}
               alt="Gallery"
