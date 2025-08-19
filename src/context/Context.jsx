@@ -53,20 +53,22 @@ const ContextProvider = ({ children }) => {
   const newChat = () => {
     setLoading(false);
     setShowResult(false);
-  }
+  };
 
   const onSent = async (prompt) => {
+    const finalPrompt = prompt || input;
+
     setResultData("");
     setDisplayedResult("");
     setTypingComplete(false);
     setLoading(true);
     setShowResult(true);
-    setRecentPrompt(input);
+    setRecentPrompt(finalPrompt);
 
     try {
-      const response = await main(input);
+      const response = await main(finalPrompt);
       setResultData(response);
-      setPreviousPrompts((prev) => [...prev, input]);
+      setPreviousPrompts((prev) => [...prev, finalPrompt]);
     } catch (error) {
       setResultData("Error occurred while fetching response.");
       console.error(error);
@@ -91,7 +93,7 @@ const ContextProvider = ({ children }) => {
     setResultData,
     onSent,
     typingComplete,
-    newChat
+    newChat,
   };
 
   return <Context.Provider value={value}>{children}</Context.Provider>;

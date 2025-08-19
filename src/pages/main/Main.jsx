@@ -3,8 +3,6 @@ import assets from "../../assets/assets";
 import { useContext } from "react";
 import { Context } from "../../context/Context.jsx";
 
-
-
 function Main() {
   const {
     onSent,
@@ -15,6 +13,11 @@ function Main() {
     input,
     recentPrompt,
   } = useContext(Context);
+
+  const handleSuggestionClick = (prompt) => {
+    setInput(prompt);
+    onSent(prompt);
+  };
 
   return (
     <main className="bg-[#121826] flex-1 h-full w-full flex flex-col justify-between text-gray-300 gap-6">
@@ -41,37 +44,81 @@ function Main() {
             </h2>
           </div>
           <div className="hidden sm:flex flex-wrap justify-center gap-4 mt-4 w-full">
-            <div className="bg-gradient-to-br from-[#00AEEF]/10 to-[#5B2CFF]/10 rounded-xl p-4 shadow-md hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 h-[150px] w-[250px] flex flex-col cursor-pointer justify-between">
+            <div
+              className="bg-gradient-to-br from-[#00AEEF]/10 to-[#5B2CFF]/10 rounded-xl p-4 shadow-md hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 h-[150px] w-[250px] flex flex-col cursor-pointer justify-between"
+              onClick={() =>
+                handleSuggestionClick(
+                  "Suggest creative weekend getaway ideas nearby"
+                )
+              }
+            >
               <p className="text-lg leading-snug text-gray-400 font-medium">
                 Suggest creative weekend getaway ideas nearby
               </p>
               <div className="bg-gradient-to-tr from-[#00AEEF] to-[#5B2CFF] p-2 rounded-full self-end">
-                <img className="w-[20px] h-[20px]" src={assets.compass_icon} alt="compass-icon" />
+                <img
+                  className="w-[20px] h-[20px]"
+                  src={assets.compass_icon}
+                  alt="compass-icon"
+                />
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-[#00AEEF]/10 to-[#5B2CFF]/10 rounded-xl p-4 shadow-md hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 h-[150px] w-[250px] flex flex-col cursor-pointer justify-between">
+            <div
+              className="bg-gradient-to-br from-[#00AEEF]/10 to-[#5B2CFF]/10 rounded-xl p-4 shadow-md hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 h-[150px] w-[250px] flex flex-col cursor-pointer justify-between"
+              onClick={() =>
+                handleSuggestionClick(
+                  "Explain how blockchain works in simple terms"
+                )
+              }
+            >
               <p className="text-lg leading-snug text-gray-400 font-medium">
                 Explain how blockchain works in simple terms
               </p>
               <div className="bg-gradient-to-tr from-[#00AEEF] to-[#5B2CFF] p-2 rounded-full self-end">
-                <img className="w-[20px] h-[20px]" src={assets.bulb_icon} alt="bulb-icon" />
+                <img
+                  className="w-[20px] h-[20px]"
+                  src={assets.bulb_icon}
+                  alt="bulb-icon"
+                />
               </div>
             </div>
-            <div className="bg-gradient-to-br from-[#00AEEF]/10 to-[#5B2CFF]/10 rounded-xl p-4 shadow-md hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 h-[150px] w-[250px] flex flex-col cursor-pointer justify-between">
+            <div
+              className="bg-gradient-to-br from-[#00AEEF]/10 to-[#5B2CFF]/10 rounded-xl p-4 shadow-md hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 h-[150px] w-[250px] flex flex-col cursor-pointer justify-between"
+              onClick={() =>
+                handleSuggestionClick(
+                  "Give me conversation starters for meeting new people"
+                )
+              }
+            >
               <p className="text-lg leading-snug text-gray-400 font-medium">
                 Give me conversation starters for meeting new people
               </p>
               <div className="bg-gradient-to-tr from-[#00AEEF] to-[#5B2CFF] p-2 rounded-full self-end">
-                <img className="w-[20px] h-[20px]" src={assets.message_icon} alt="message-icon" />
+                <img
+                  className="w-[20px] h-[20px]"
+                  src={assets.message_icon}
+                  alt="message-icon"
+                />
               </div>
             </div>
-            <div className="bg-gradient-to-br from-[#00AEEF]/10 to-[#5B2CFF]/10 rounded-xl p-4 shadow-md hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 h-[150px] w-[250px] flex flex-col cursor-pointer justify-between">
+            <div
+              className="bg-gradient-to-br from-[#00AEEF]/10 to-[#5B2CFF]/10 rounded-xl p-4 shadow-md hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 h-[150px] w-[250px] flex flex-col cursor-pointer justify-between"
+              onClick={() =>
+                handleSuggestionClick(
+                  "Write a JavaScript function to reverse a string"
+                )
+              }
+            >
               <p className="text-lg leading-snug text-gray-400 font-medium">
                 Write a JavaScript function to reverse a string
               </p>
               <div className="bg-gradient-to-tr from-[#00AEEF] to-[#5B2CFF] p-2 rounded-full self-end">
-                <img className="w-[20px] h-[20px]" src={assets.code_icon} alt="code-icon" />
+                <img
+                  className="w-[20px] h-[20px]"
+                  src={assets.code_icon}
+                  alt="code-icon"
+                />
               </div>
             </div>
           </div>
@@ -116,16 +163,6 @@ function Main() {
             value={input}
           />
           <div className="flex items-center  px-4">
-            {/* <img
-              src={assets.gallery_icon}
-              alt="Gallery"
-              className="w-[20px] cursor-pointer hover:scale-110 transition"
-            /> */}
-            {/* <img
-              src={assets.mic_icon}
-              alt="Mic"
-              className="w-[20px] cursor-pointer hover:scale-110 transition"
-            /> */}
             <img
               onClick={() => onSent()}
               src={assets.send_icon}
