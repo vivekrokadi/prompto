@@ -1,12 +1,13 @@
 @import "tailwindcss";
 
-
-
-#root{
-  height: 100vh;
-  display: flex;
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-.result::-webkit-scrollbar{
+.result::-webkit-scrollbar {
   display: none;
 }

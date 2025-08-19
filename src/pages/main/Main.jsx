@@ -17,7 +17,7 @@ function Main() {
   } = useContext(Context);
 
   return (
-    <main className="bg-[#121826] flex-1 min-h-screen w-full flex flex-col justify-between text-gray-300 gap-6">
+    <main className="bg-[#121826] flex-1 h-full w-full flex flex-col justify-between text-gray-300 gap-6">
       <div className="flex justify-between items-center w-[95%] mx-auto mt-5">
         <div className="flex items-center">
           <img className="w-[50px]" src="/prompto_rm.png" alt="Prompto Logo" />

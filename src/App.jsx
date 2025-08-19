@@ -5,7 +5,7 @@ import Main from './pages/main/Main'
 
 function App() {
   return (
-    <div className="flex h-screen w-screen overflow-hidden">
+    <div className="flex h-full w-full overflow-hidden">
       <Sidebar />
       <Main />
     </div>
