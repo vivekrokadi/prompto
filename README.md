@@ -1,12 +1,41 @@
-# React + Vite
+# Prompto - AI Chat Assistant  (Powered by Gemini 2.0 Flash)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Prompto Logo](/public/prompto_rm.png)  
 
-Currently, two official plugins are available:
+A modern AI-powered chat assistant built with React, Tailwind CSS, and Vite. Prompto provides a sleek interface for interacting with an AI model, featuring a collapsible sidebar, responsive design, leveraging Google's Gemini 2.0 Flash model for fast, intelligent responses and a clean user experience. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+✨ **Modern UI**  
+- Gradient accents  
+- Dark theme for reduced eye strain  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+📱 **Responsive Design**  
+- Works on desktop, tablet, and mobile  
+- Collapsible sidebar for smaller screens  
+- Optimized input area for all devices  
+
+🗂 **Chat Management**  
+- Start new chats  
+- View recent prompts history  
+- Persistent conversation context  
+
+⚡ **Performance Optimized**  
+- Fast load times with Vite  
+- Efficient state management  
+- Minimal dependencies  
+
+## Screenshots
+
+| Desktop View | Mobile View |
+|-------------|-------------|
+| ![Desktop View](/screenshots/Desktop.jpeg) | ![Mobile View](/screenshots/Mobile.jpeg) |
+
+## Technologies Used
+
+- ⚛️ React
+- 🎨 Tailwind CSS
+- ⚡ Vite
+- 🔄 React Context API (State Management)
+- 📱 Fully Responsive Design
